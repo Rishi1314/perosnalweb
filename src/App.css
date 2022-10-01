@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body{
+    background-color: black;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.circlein{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  scale: 1.3;
+  border-radius: 50%;
+  background-color: transparent;
+  border: whitesmoke 2px solid;
+  transition: 0.3s;
+}
+.circleout{
+  position: absolute;
+  background-color: transparent;
+  border: whitesmoke 2px dotted;
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.circlein:hover{
+  scale: 1.5;
+  transition: 0.3s;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.circle1{
+  top: 0%;
+  left: 50%;
+}
+.circle2{
+  top: 80%;
+  left: 60%;
+}
+.circle3{
+  top: 10%;
+  left: 20%;
+}
+
+
+.pageTitle{
+  color: white;
+  font-size: 400%;
+  font-family: 'Dancing Script', cursive;
+}
+.pageTitle:hover .underline{
+  width: 100%;
+  transition: 0.3s;
+}
+.pageCaption{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+.underline{
+  transition: 0.3s;
+  width: 0;
+  height: 2px;
+  background-color: white;
+}
+
+/* Navbar */
+header{
+  position: relative;
+}
+nav{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  position: absolute;
+  background-color: black;
+  height: 1vh;
+  top:-1000px;
+  height: 97vh;
+  width: 100%;
+  transition: 0.3s;
+  
+}
+.showNav{
+  top:0;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 200%;
+}
+
+.logoName{
+  z-index: 3;
+  font-size: 150%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logoName:hover{
+  color: gold;
+  transition: 0.3s;
+  transform: scale(1.5);
+}
+.navbar{
+  
+  padding: 1%;
+  margin-top: 1%;
+  margin-right: 2%;
+  margin-left: 2%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.nav-open-butt{
+  z-index: 3;
+  cursor: pointer;
+  background: transparent;
+  width: 5%;
+}
+.hamburger{
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  gap:7px;
+  align-items: center;
+}
+
+.hamburgerLine1{
+  display: block;
+  background-color: white;
+  width: 10px;
+  height: 1px;
+  transition: 0.3s;
+}
+.hamburgerLine2{
+  display: block;
+  background-color: white;
+  width: 20px;
+  height: 1px;
+  transition: 0.3s;
+}
+.hamburgerLine3{
+  display: block;
+  background-color: white;
+  width: 10px;
+  height: 1px;
+  transition: 0.3s;
+}
+
+.line1{
+  width: 19px;
+  rotate: 60deg;
+  transform-origin: top left;
+  transition: 0.3s;
+
+}
+.line2{
+  background: transparent;
+  transition: 0.3s;
+
+}
+
+.line3{
+  width: 19px;
+  transition: 0.3s;
+
+  rotate: -60deg;
+  transform-origin: bottom left;
+}
+
+/* Home Page */
+.homeSocials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  font-size: 15px;
+  color: white;
+  height: 100px;transition: 0.3s;
+}
+.homeSocials a:hover{
+  color: #5800FF;
+  transition: 0.3s;
+}
+.heroButtons{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.heroButtons button{
+  transition: 0.5s;
+  width: 150px;
+  height: 40px;
+  border: 1px solid white;
+}
+
+.buttonResume{
+  background-color: #5800FF;
+}
+.buttonContact{
+  background-color: #F98404;
+}
+
+.heroButtons button:hover{
+  background-color: transparent;
+  border-radius: 5%;
+  border: 2px dotted white;
+  transition: 0.5s;
+}
+.heroButtons h1{
+  transition: 0.5s;
+}
+.buttonResume:hover h1{
+  transform: scale(1.1);
+  transition: 0.5s;
+} 
+.buttonContact:hover h1{
+  transform: scale(1.1);
+  transition: 0.5s;
+} 
+.heroText{
+  /* display: flex;
+  flex-direction: column; */
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+.heroScreen{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1rem;
+  height: 90vh;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.heroText li{
+  list-style: none;
+}
+
+.heroTextLine1{
+  font-size: 250%;
+}
+.heroTextLine2{
+  font-size: 150%;
+}
+.circleMela{
+  position: absolute;
+}
+
+
+.main-page-svg{
+ width: 70%; 
+ z-index: 0;
+}
+
+/* About */
+.aboutPic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.aboutPic img{
+  width: 50%;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(133, 133, 133, 0.36), 0 6px 20px 0 rgba(123, 123, 123, 0.398);
+}
+.aboutScreen{
+  height: 80vh;
+  padding: 2%;
+  display: grid;
+  color: white;
+  
+}
+
+.aboutText{
+  font-size: 150%;
+  justify-content: center;
+  align-items: center;
+}
+/* project */
+.projectDiv{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+.projectParent{
+  display: flex;
+  justify-content: center;
+}
+
+.projectCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 360px;
+  height: 161px;
+  margin: 0;
+}
+.projectImg{
+  position: absolute;
+}
+.projectLink{
+  scale: 0;
+  position: absolute;
+  background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.projectCard:hover .projectLink{
+  scale: 1;
+  transition: 0.3s;
+  transform:rotate(-25deg);
+  cursor: pointer;
+}
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* contact */
+.contactCardText{
+  display: flex;
+  flex-direction: column;
+}
+.contactSocials{
+  color: white;
+  width: 140%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 100%;
+}
+.contactSocials a{
+  transition: 0.3s;
+}
+.contactSocials a:hover{
+  scale: 1.3;
+  transition: 0.3s;
+}
+.contactPage{
+
+  margin:2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactCard{
+  
+  border-radius: 5%;
+  width: 400px;
+  height: 70vh;
+  background-color: #7F8487;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+.contactCard *{
+  margin: 2%;
+}
+.contactCard span{
+  width: 140%;
+  color: #Ffff;
+  font-size: 200%;
+  text-align: center;
+}
+.contactCard form{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contactInput{
+  color:white;
+  width: 140%;
+  border-bottom: 2px white solid;
+  border-radius: 5%;
+  background: transparent;
+  outline: none;
+  
+}
+.formSubmit{
+  background-color: white;
+  width: 140%;
+  border-radius: 2%;
+  border: 2px white solid;
+  padding: 2%;
+  transition: 0.3s;
+}
+.formSubmit:hover{
+  background-color: #7F8487;
+  transition: 0.3s;
+}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+  color: white;
+}
+:-ms-input-placeholder{
+  color: white;
+}
+::-moz-placeholder{
+  color: white;
+  opacity: 1;
+}
+:-moz-placeholder{
+  color: white;
+  opacity: 1;
+}
+/* shapes */
+
+/* animation */
+@keyframes circle {
+  0%   {transform: translate(-100%,-10%);}
+  25%  {transform: translate(50%,50%);}
+  50%  {transform: translate(70%,800%);}
+  100% {transform: translate(-10%,10%);}
+}
+/* for responvieness big screen */
+@media (min-width: 600px) {
+  .aboutScreen{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .contactCard{
+    flex-direction: row;
+  }
+  .heroScreen { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width:600px) {
+  .contactSocials{
+    width: 80%;
+  }
+  .aboutScreen{
+    grid-template-rows: repeat(2,1fr);
+    gap: 2rem;
+  }
+  .aboutPic img{
+    width: 80%;
+  }
+  .circlein,.circleout{display: none;}
+  .contactCard{
+    width: 100%;
+  }
+  .formSubmit{
+    width: 50%;
+  }
+  .contactInput{
+    width: 60%;
+  }
+}
+
+/* .content__item {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	counter-increment: itemcounter;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.content__item::before {
+	color: var(--color-number);
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: counters(itemcounter, ".", decimal-leading-zero);
+}
+
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 1.5rem 3rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.button--janus {
+	font-family: freight-display-pro, serif;
+	font-weight: 900;
+	width: 175px;
+	height: 120px;
+	color: #fff;
+	background: none;
+}
+
+.button--janus::before {
+	content: '';
+	background: #e6e6e6;
+	-webkit-clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
+}
+
+.button--janus:hover::before {
+	background: #000;
+	-webkit-clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+	clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+}
+
+.button--janus::after {
+	content: '';
+	height: 86%;
+	width: 97%;
+	top: 5%;
+	border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+	border: 1px solid #000;
+	transform: rotate(-20deg);
+	z-index: -1;
+	transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+
+.button--janus:hover::after {
+	transform: translate3d(0,-5px,0);
+}
+
+.button--janus span {
+	display: block;
+	transition: transform 0.3s ease;
+	mix-blend-mode: difference;
+}
+
+.button--janus:hover span {
+	transform: translate3d(0,-10px,0);
+} */
